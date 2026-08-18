@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>納期のご案内｜西条シャツ</title>
+<style>
+  :root{
+    --blue:#0065AE;
+    --pale:#E8F1F8;
+    --ink:#1C1C1C;
+    --white:#FFFFFF;
+  }
+  *{box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%;}
+  body{
+    margin:0;
+    background:var(--white);
+    color:var(--ink);
+    font-family:"Noto Sans JP","Noto Sans CJK JP","Hiragino Sans","Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;
+    font-weight:400;
+    font-size:17px;
+    line-height:1.8;
+    letter-spacing:.02em;
+  }
+  .wrap{max-width:600px;margin:0 auto;padding:28px 20px 56px;}
+
+  .head{border-bottom:2px solid var(--blue);padding-bottom:16px;margin-bottom:28px;}
+  .brand{font-size:15px;color:var(--blue);letter-spacing:.14em;margin:0 0 6px;}
+  .title{font-size:26px;font-weight:700;line-height:1.4;margin:0;}
+  .month{font-size:16px;color:var(--blue);margin:8px 0 0;}
+
+  section{margin-bottom:40px;}
+  h2{
+    font-size:19px;font-weight:700;color:var(--blue);
+    margin:0 0 14px;padding-left:12px;
+    border-left:5px solid var(--blue);line-height:1.5;
+  }
+  p{margin:0 0 12px;}
+  .note{font-size:15px;line-height:1.75;}
+
+  label{display:block;font-size:16px;font-weight:500;margin-bottom:8px;}
+  select{
+    width:100%;
+    font-family:inherit;font-size:19px;font-weight:500;
+    color:var(--ink);background:var(--white);
+    border:2px solid var(--blue);border-radius:6px;
+    padding:16px 14px;
+    appearance:none;-webkit-appearance:none;
+    background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cpath fill='%230065AE' d='M2 5l6 7 6-7z'/%3E%3C/svg%3E");
+    background-repeat:no-repeat;background-position:right 16px center;
+  }
+  select:focus{outline:3px solid var(--blue);outline-offset:2px;}
+
+  .result{margin-top:20px;border:1px solid var(--blue);border-radius:6px;overflow:hidden;}
+  .result-head{background:var(--pale);padding:12px 16px;font-size:15px;}
+  .row{display:flex;align-items:baseline;gap:12px;padding:16px;border-top:1px solid var(--pale);}
+  .row:first-of-type{border-top:none;}
+  .row-label{flex:0 0 auto;width:38%;font-size:15px;line-height:1.6;}
+  .row-date{flex:1 1 auto;font-size:22px;font-weight:700;color:var(--blue);line-height:1.4;}
+
+  .list{list-style:none;margin:0 0 14px;padding:0;}
+  .list li{
+    padding:12px 14px;border-bottom:1px solid var(--pale);
+    display:flex;align-items:baseline;gap:12px;font-size:18px;
+  }
+  .list li:first-child{border-top:1px solid var(--pale);}
+  .day{font-weight:700;color:var(--blue);}
+  .past{color:#8a8a8a;}
+  .past .day{color:#8a8a8a;font-weight:500;}
+  .tag{margin-left:auto;font-size:14px;font-weight:400;}
+
+  .panel{background:var(--pale);padding:16px;border-radius:6px;font-size:15px;line-height:1.75;}
+  .panel p:last-child{margin-bottom:0;}
+
+  footer{border-top:1px solid var(--pale);padding-top:16px;font-size:14px;line-height:1.75;color:var(--ink);}
+
+  @media (max-width:400px){
+    body{font-size:16px;}
+    .title{font-size:23px;}
+    .row{display:block;}
+    .row-label{width:auto;margin-bottom:2px;}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="head">
+    <p class="brand">西条シャツ ／ The Shirt &amp; Sons</p>
+    <h1 class="title">納期のご案内</h1>
+    <p class="month">2026年8月度</p>
+  </header>
+
+  <section id="fair-section" hidden>
+    <h2>開催中のフェア</h2>
+    <div id="fair-list"></div>
+  </section>
+
+  <section>
+    <h2>納期の確認</h2>
+    <p class="note">ご注文をお受けした日を選んでいただくと、お渡しの予定日が表示されます。</p>
+    <label for="order-date">ご注文をお受けした日</label>
+    <select id="order-date"></select>
+
+    <div class="result" id="result" aria-live="polite">
+      <div class="result-head" id="result-head"></div>
+      <div class="row">
+        <div class="row-label">通常のご注文</div>
+        <div class="row-date" id="date-normal">—</div>
+      </div>
+      <div class="row">
+        <div class="row-label">加工を含むご注文</div>
+        <div class="row-date" id="date-proc">—</div>
+      </div>
+    </div>
+
+    <p class="note" style="margin-top:14px;">
+      ※ 加工の要否はご注文の内容によって変わります。ご不明なときは、LINEのトークからお気軽にお尋ねください。
+    </p>
+
+    <div class="panel" style="margin-top:16px;">
+      <p>製作にはおおよそ1ヶ月〜1.5ヶ月（最長60日）をいただいております。夏季はさらにお時間をいただく場合がございます。</p>
+      <p>表示は現時点の予定です。生地の入荷状況などにより、日程が延びる場合がございます。</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>今月の一粒万倍日</h2>
+    <ul class="list" id="ichiryu-list"></ul>
+    <div class="panel">
+      <p>一粒万倍日にBespokeをご注文いただくと10%OFF。</p>
+      <p>※ 各割引の併用不可</p>
+      <p>※ Bespoke（対面でのオーダー）が対象です。東京23区内の方は出張採寸も承ります</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>ご相談・ご予約は、LINEのトークからどうぞ気軽にお声がけください。</p>
+    <p id="updated"></p>
+  </footer>
+
+</div>
+
+<script>
+/* ================================================================
+   毎月の更新はここだけを差し替える
+   ================================================================ */
+
+/* 更新日（画面下部に表示） */
+const UPDATED = "2026-08-18";
+
+/* フェア・イヴェント（ないときは空配列 [] のまま。セクションごと非表示になる） */
+const FAIRS = [
+  // { name:"生地入荷フェア", period:"2026年9月1日(火)〜9月14日(月)", detail:"秋冬の新作生地をご覧いただけます" }
+];
+
+/* 納期表
+   order  … 承り日
+   normal … 通常商品の店着日
+   proc   … 加工品の店着日
+   ※ お渡し予定日は「店着日＋1日」で自動計算する */
+const SCHEDULE = [
+  {order:"2026-07-12", normal:"2026-08-21", proc:"2026-08-28"},
+  {order:"2026-07-13", normal:"2026-08-21", proc:"2026-08-28"},
+  {order:"2026-07-14", normal:"2026-08-23", proc:"2026-08-30"},
+  {order:"2026-07-15", normal:"2026-08-23", proc:"2026-08-30"},
+  {order:"2026-07-16", normal:"2026-08-23", proc:"2026-08-30"},
+  {order:"2026-07-17", normal:"2026-08-26", proc:"2026-09-02"},
+  {order:"2026-07-18", normal:"2026-08-26", proc:"2026-09-02"},
+  {order:"2026-07-19", normal:"2026-08-28", proc:"2026-09-04"},
+  {order:"2026-07-20", normal:"2026-08-28", proc:"2026-09-04"},
+  {order:"2026-07-21", normal:"2026-08-30", proc:"2026-09-06"},
+  {order:"2026-07-22", normal:"2026-08-30", proc:"2026-09-06"},
+  {order:"2026-07-23", normal:"2026-08-30", proc:"2026-09-06"},
+  {order:"2026-07-24", normal:"2026-09-02", proc:"2026-09-09"},
+  {order:"2026-07-25", normal:"2026-09-02", proc:"2026-09-09"},
+  {order:"2026-07-26", normal:"2026-09-04", proc:"2026-09-11"},
+  {order:"2026-07-27", normal:"2026-09-04", proc:"2026-09-11"},
+  {order:"2026-07-28", normal:"2026-09-06", proc:"2026-09-13"},
+  {order:"2026-07-29", normal:"2026-09-06", proc:"2026-09-13"},
+  {order:"2026-07-30", normal:"2026-09-06", proc:"2026-09-13"},
+  {order:"2026-07-31", normal:"2026-09-09", proc:"2026-09-16"},
+  {order:"2026-08-01", normal:"2026-09-09", proc:"2026-09-16"},
+  {order:"2026-08-02", normal:"2026-09-11", proc:"2026-09-18"},
+  {order:"2026-08-03", normal:"2026-09-11", proc:"2026-09-18"},
+  {order:"2026-08-04", normal:"2026-09-13", proc:"2026-09-20"},
+  {order:"2026-08-05", normal:"2026-09-13", proc:"2026-09-20"},
+  {order:"2026-08-06", normal:"2026-09-13", proc:"2026-09-20"},
+  {order:"2026-08-07", normal:"2026-09-16", proc:"2026-09-26"},
+  {order:"2026-08-08", normal:"2026-09-16", proc:"2026-09-26"},
+  {order:"2026-08-09", normal:"2026-09-18", proc:"2026-09-30"},
+  {order:"2026-08-10", normal:"2026-09-18", proc:"2026-09-30"},
+  {order:"2026-08-11", normal:"2026-09-18", proc:"2026-09-30"},
+  {order:"2026-08-12", normal:"2026-09-18", proc:"2026-09-30"},
+  {order:"2026-08-13", normal:"2026-09-18", proc:"2026-09-30"},
+  {order:"2026-08-14", normal:"2026-09-18", proc:"2026-09-30"},
+  {order:"2026-08-15", normal:"2026-09-18", proc:"2026-09-30"},
+  {order:"2026-08-16", normal:"2026-09-20", proc:"2026-10-02"},
+  {order:"2026-08-17", normal:"2026-09-20", proc:"2026-10-02"},
+  {order:"2026-08-18", normal:"2026-09-20", proc:"2026-10-02"},
+  {order:"2026-08-19", normal:"2026-09-26", proc:"2026-10-03"},
+  {order:"2026-08-20", normal:"2026-09-26", proc:"2026-10-03"},
+  {order:"2026-08-21", normal:"2026-09-26", proc:"2026-10-03"},
+  {order:"2026-08-22", normal:"2026-09-26", proc:"2026-10-03"},
+  {order:"2026-08-23", normal:"2026-09-30", proc:"2026-10-07"},
+  {order:"2026-08-24", normal:"2026-09-30", proc:"2026-10-07"},
+  {order:"2026-08-25", normal:"2026-09-30", proc:"2026-10-07"},
+  {order:"2026-08-26", normal:"2026-10-02", proc:"2026-10-09"},
+  {order:"2026-08-27", normal:"2026-10-02", proc:"2026-10-09"},
+  {order:"2026-08-28", normal:"2026-10-02", proc:"2026-10-09"},
+  {order:"2026-08-29", normal:"2026-10-02", proc:"2026-10-09"},
+  {order:"2026-08-30", normal:"2026-10-04", proc:"2026-10-11"},
+  {order:"2026-08-31", normal:"2026-10-04", proc:"2026-10-11"}
+];
+
+/* 今月の一粒万倍日 */
+const ICHIRYU = [
+  "2026-08-03",
+  "2026-08-13",
+  "2026-08-14",
+  "2026-08-25",
+  "2026-08-26"
+];
+
+/* ================================================================
+   以下は書き換え不要
+   ================================================================ */
+
+const WD = ["日","月","火","水","木","金","土"];
+
+function toDate(s){
+  const [y,m,d] = s.split("-").map(Number);
+  return new Date(y, m-1, d);
+}
+function fmt(dt){
+  return dt.getMonth()+1 + "月" + dt.getDate() + "日(" + WD[dt.getDay()] + ")";
+}
+function fmtShort(s){
+  const dt = toDate(s);
+  return dt.getDate() + "日(" + WD[dt.getDay()] + ")";
+}
+function plusOne(s){
+  const dt = toDate(s);
+  dt.setDate(dt.getDate() + 1);
+  return dt;
+}
+function todayKey(){
+  const n = new Date();
+  const p = v => String(v).padStart(2,"0");
+  return n.getFullYear() + "-" + p(n.getMonth()+1) + "-" + p(n.getDate());
+}
+
+/* フェア */
+(function renderFairs(){
+  if(!FAIRS.length) return;
+  const sec = document.getElementById("fair-section");
+  const box = document.getElementById("fair-list");
+  box.innerHTML = FAIRS.map(f =>
+    '<div class="panel" style="margin-bottom:12px;">' +
+      '<p style="font-weight:700;color:#0065AE;">' + f.name + '</p>' +
+      '<p>' + f.period + '</p>' +
+      (f.detail ? '<p>' + f.detail + '</p>' : '') +
+    '</div>'
+  ).join("");
+  sec.hidden = false;
+})();
+
+/* 納期 */
+const sel = document.getElementById("order-date");
+SCHEDULE.forEach(r => {
+  const o = document.createElement("option");
+  o.value = r.order;
+  o.textContent = fmt(toDate(r.order));
+  sel.appendChild(o);
+});
+
+function update(){
+  const r = SCHEDULE.find(x => x.order === sel.value);
+  if(!r) return;
+  document.getElementById("result-head").textContent =
+    fmt(toDate(r.order)) + " にお受けした場合のお渡し予定日";
+  document.getElementById("date-normal").textContent = fmt(plusOne(r.normal));
+  document.getElementById("date-proc").textContent = fmt(plusOne(r.proc));
+}
+
+(function setDefault(){
+  const t = todayKey();
+  const hit = SCHEDULE.find(x => x.order >= t) || SCHEDULE[SCHEDULE.length-1];
+  sel.value = hit.order;
+  update();
+})();
+
+sel.addEventListener("change", update);
+
+/* 一粒万倍日 */
+(function renderIchiryu(){
+  const t = todayKey();
+  document.getElementById("ichiryu-list").innerHTML = ICHIRYU.map(d => {
+    const past = d < t;
+    return '<li class="' + (past ? "past" : "") + '">' +
+             '<span class="day">' + fmtShort(d) + '</span>' +
+             (past ? '<span class="tag">終了</span>' : '') +
+           '</li>';
+  }).join("");
+})();
+
+/* 更新日 */
+document.getElementById("updated").textContent = "最終更新：" + fmt(toDate(UPDATED));
+</script>
+</body>
+</html>

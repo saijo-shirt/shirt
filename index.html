@@ -92,8 +92,8 @@
     <p class="month">2026年8月度</p>
   </header>
 
-  <section id="fair-section" hidden>
-    <h2>開催中のフェア</h2>
+  <section id="fair-section">
+    <h2>フェアのご案内</h2>
     <div id="fair-list"></div>
   </section>
 
@@ -148,7 +148,7 @@
    ================================================================ */
 
 /* 更新日（画面下部に表示） */
-const UPDATED = "2026-08-18";
+const UPDATED = "2026-08-19";
 
 /* フェア・イヴェント（ないときは空配列 [] のまま。セクションごと非表示になる） */
 const FAIRS = [
@@ -218,9 +218,9 @@ const SCHEDULE = [
 const ICHIRYU = [
   "2026-08-03",
   "2026-08-13",
-  "2026-08-14",
+  "2026-08-18",
   "2026-08-25",
-  "2026-08-26"
+  "2026-08-30"
 ];
 
 /* ================================================================
@@ -253,9 +253,11 @@ function todayKey(){
 
 /* フェア */
 (function renderFairs(){
-  if(!FAIRS.length) return;
-  const sec = document.getElementById("fair-section");
   const box = document.getElementById("fair-list");
+  if(!FAIRS.length){
+    box.innerHTML = '<p class="note">現在、開催中のフェアはございません。</p>';
+    return;
+  }
   box.innerHTML = FAIRS.map(f =>
     '<div class="panel" style="margin-bottom:12px;">' +
       '<p style="font-weight:700;color:#0065AE;">' + f.name + '</p>' +
@@ -263,7 +265,6 @@ function todayKey(){
       (f.detail ? '<p>' + f.detail + '</p>' : '') +
     '</div>'
   ).join("");
-  sec.hidden = false;
 })();
 
 /* 納期 */

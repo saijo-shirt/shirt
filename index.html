@@ -241,9 +241,10 @@
   <section>
     <p class="sec-label"><span class="sec-num">03</span>今月の一粒万倍日</p>
     <div class="days" id="ichiryu-list"></div>
-    <p class="offer">一粒万倍日にBespokeをご注文いただくと10%OFF。</p>
+    <p class="offer">一粒万倍日にBespokeでご注文いただくと10%OFF。</p>
     <div class="panel" style="margin-top:0;">
       <p>※ 各割引の併用不可</p>
+      <p id="fair-overlap" hidden>※ フェアの割引と重なる場合は、割引額の大きいほうを適用いたします</p>
       <p>※ Bespoke（対面でのオーダー）が対象です。<br>東京23区内の方は出張採寸も承ります</p>
     </div>
   </section>
@@ -410,6 +411,7 @@ document.getElementById("month-label").textContent = CURRENT.label;
 (function renderFairs(){
   const box = document.getElementById("fair-list");
   const live = FAIRS.filter(f => !f.to || f.to >= TODAY);
+  document.getElementById("fair-overlap").hidden = live.length === 0;
   if(!live.length){
     box.innerHTML = '<p class="fair-none">現在、開催中のフェアはございません。</p>';
     return;

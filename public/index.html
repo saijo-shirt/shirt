@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="ja"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>新着生地のご案内｜西条シャツ</title>
+
+<link rel="preload" as="font" type="font/woff2" href="https://saijo-shirt.github.io/shirt/assets/kiji-sm600.4a8fdecb.woff2" crossorigin><link rel="preload" as="font" type="font/woff2" href="https://saijo-shirt.github.io/shirt/assets/kiji-bm600.ab35281f.woff2" crossorigin>
+<style>
+@font-face{font-family:"Shippori Mincho";font-style:normal;font-weight:600;font-display:swap;src:url("https://saijo-shirt.github.io/shirt/assets/kiji-sm600.4a8fdecb.woff2") format("woff2");}
+@font-face{font-family:"Bodoni Moda";font-style:normal;font-weight:600;font-display:swap;src:url("https://saijo-shirt.github.io/shirt/assets/kiji-bm600.ab35281f.woff2") format("woff2");}
+:root{--paper:#ece6d8;--ink:#2e3a45;--ai:#566878;--tb:#7c6044;--tbd:#5f4630;--mut:#7d7a70;
+  --serif:"Shippori Mincho","Hiragino Mincho ProN","Yu Mincho","Noto Serif CJK JP",serif;
+  --num:"Bodoni Moda","Shippori Mincho",serif;}
+*{box-sizing:border-box;}
+html{-webkit-text-size-adjust:100%;}
+body{margin:0;background:var(--paper);color:var(--ink);
+  font-family:"Noto Sans JP","Noto Sans CJK JP","Hiragino Sans","Hiragino Kaku Gothic ProN","Yu Gothic Medium","Yu Gothic","Meiryo",sans-serif;
+  font-weight:400;font-size:17px;line-height:1.9;letter-spacing:.03em;
+  font-feature-settings:"palt" 1;line-break:strict;word-break:auto-phrase;-webkit-font-smoothing:antialiased;}
+p{margin:0;} button{font:inherit;color:inherit;letter-spacing:inherit;}
+b{font-weight:600;font-family:var(--num);font-feature-settings:"lnum" 1;letter-spacing:0;}
+
+.hero{position:relative;container-type:inline-size;max-width:560px;margin:0 auto;line-height:0;--u:min(1vw,5.6px);background:var(--tb);}
+.hero img{width:100%;height:auto;display:block;}
+.hero h1{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);margin:0;}
+.season{position:absolute;left:calc(8.6*var(--u));top:calc(46.6*var(--u));color:var(--paper);line-height:1;white-space:nowrap;}
+.season b{display:block;font-size:calc(11.2*var(--u));line-height:.9;}
+.season .sw{display:block;margin-top:calc(1.4*var(--u));font-family:var(--num);font-weight:600;font-size:max(15px,calc(3.85*var(--u)));letter-spacing:.04em;line-height:1.3;}
+.wrap{max-width:560px;margin:0 auto;padding:0 24px 56px;}
+section{margin-top:44px;padding-top:26px;border-top:1px solid var(--tb);}
+.hero + .wrap section:first-child{margin-top:34px;border-top:0;padding-top:0;}
+.sec-label{font-family:var(--serif);font-weight:600;font-size:23px;line-height:1.4;letter-spacing:.06em;margin-bottom:18px;}
+.sec-num,.tn{display:none;}
+
+.recs{display:grid;gap:0;}
+.rec{display:grid;grid-template-columns:118px 1fr;gap:16px;align-items:center;width:100%;text-align:left;background:none;border:0;border-top:1px solid rgba(124,96,68,.45);padding:14px 0;cursor:pointer;}
+.rec:first-child{border-top:0;padding-top:0;}
+.rec img{width:118px;height:138px;object-fit:cover;display:block;}
+.rec-tag{font-size:15px;color:var(--tbd);letter-spacing:.1em;line-height:1.4;}
+.rec-tag{display:flex;flex-wrap:wrap;column-gap:1.1em;} .rec-tag span{white-space:nowrap;}
+
+.code{font-size:15px;line-height:1;margin-top:8px;white-space:nowrap;}
+.code b{font-size:42px;margin-left:2px;}
+.color2{font-size:15px;line-height:1.5;margin-top:8px;}
+.base{display:none;}
+.price{font-size:15px;line-height:1.5;font-variant-numeric:tabular-nums;}
+.price .unit{margin-left:1px;}
+
+.tabs{display:flex;flex-wrap:wrap;gap:8px;}
+.tab{font-size:15px;line-height:1.4;padding:9px 12px;border:1px solid var(--tb);background:none;border-radius:0;cursor:pointer;}
+.tab .n{margin-left:6px;font-size:13px;color:var(--mut);}
+.tab[aria-selected="true"]{background:var(--ai);border-color:var(--ai);color:var(--paper);}
+.tab[aria-selected="true"] .n{color:var(--paper);}
+.kakaku{font-size:15px;line-height:1.9;margin-top:14px;}
+.toc{display:flex;flex-wrap:wrap;gap:4px 18px;margin-top:18px;}
+.toc button{position:relative;font-size:15px;line-height:1.6;background:none;border:0;border-bottom:1px solid var(--tb);padding:2px 0;cursor:pointer;}
+.toc button::after{content:"";position:absolute;left:-6px;right:-6px;top:-6px;bottom:-6px;}
+.toc .tc{margin-left:6px;font-size:13px;color:var(--mut);}
+#list .sec-label{font-size:20px;margin:34px 0 8px;scroll-margin-top:12px;}
+.lead{margin-bottom:18px;}
+.runnote{display:none;}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:26px 14px;align-items:start;}
+.card2{display:block;width:100%;text-align:left;background:none;border:0;padding:0;cursor:pointer;min-width:0;}
+.phwrap{position:relative;line-height:0;}
+.ph{width:100%;aspect-ratio:6/7;object-fit:cover;display:block;}
+.zoom{position:absolute;right:6px;bottom:6px;width:26px;height:26px;background:var(--paper);display:flex;align-items:center;justify-content:center;}
+.zoom svg{fill:var(--ink);}
+.card2.open .phwrap{outline:2px solid var(--ink);outline-offset:2px;}
+.flag{display:block;font-size:15px;color:var(--tbd);line-height:1.5;margin-top:4px;}
+.more{grid-column:1/-1;min-width:0;padding:18px 0 14px;border-top:1px solid rgba(124,96,68,.45);border-bottom:1px solid rgba(124,96,68,.45);}
+.more[hidden]{display:none;}
+.stage{width:100%;aspect-ratio:6/7;object-fit:cover;display:block;}
+.more .code{margin-top:14px;margin-bottom:8px;} .more .code b{font-size:27px;} .more .code .cn{margin-left:10px;}
+.more-close{display:inline-block;margin-top:8px;padding:8px 0;background:none;border:0;font:inherit;font-size:15px;color:var(--ink);text-decoration:underline;text-underline-offset:4px;cursor:pointer;}
+.note,.spec,.maker,.thumb-cap{font-size:15px;line-height:1.8;}
+.thumbs{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:10px 0 6px;}
+.thumb{padding:0;border:1px solid transparent;background:none;line-height:0;cursor:pointer;}
+.thumb[aria-pressed="true"]{border-color:var(--ink);}
+.thumb img{width:100%;aspect-ratio:1;object-fit:cover;display:block;}
+.imgna{aspect-ratio:6/7;background:#dcd3c3;display:flex;align-items:center;justify-content:center;font-size:13px;color:var(--mut);line-height:1.4;}
+.thumb .imgna{aspect-ratio:1;}
+
+footer{margin-top:48px;}
+.linkbox{display:flex;justify-content:space-between;align-items:center;background:var(--ai);color:var(--paper);text-decoration:none;padding:16px 18px;
+  font-family:var(--serif);font-weight:600;font-size:20px;line-height:1.4;letter-spacing:.06em;}
+.linkbox::after{content:"";width:10px;height:10px;border-top:2px solid var(--paper);border-right:2px solid var(--paper);transform:rotate(45deg);margin-right:4px;}
+.foot-band{display:block;width:calc(100% + 48px);margin:14px -24px 0;height:auto;}
+.foot-msg{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);}
+.foot-note,.legend{font-size:15px;line-height:1.8;margin-top:14px;}
+.legend{margin-top:2px;}
+@media (max-width:379px){.wrap{padding-left:20px;padding-right:20px;} .foot-band{width:calc(100% + 40px);margin-left:-20px;margin-right:-20px;} .code b{font-size:34px;} .rec{grid-template-columns:96px 1fr;} .rec img{width:96px;height:112px;}}
+@media (max-width:339px){.code b{font-size:30px;}}
+@media (min-width:900px){
+  body{font-size:18px;}
+  .hero{--u:min(1vw,9.6px);max-width:960px;margin-top:40px;}
+  .hero .season{left:calc(6.4*var(--u));top:calc(25.2*var(--u));}
+  .hero .season b{font-size:calc(7.6*var(--u));}
+  .hero .season .sw{font-size:calc(2.3*var(--u));margin-top:calc(.8*var(--u));}
+  .wrap{max-width:1040px;padding:0 40px 72px;}
+  section{display:grid;grid-template-columns:250px minmax(0,1fr);gap:0 40px;margin-top:52px;padding-top:34px;}
+  .hero + .wrap section:first-child{margin-top:48px;}
+  .sec-label{font-size:27px;}
+  .recs{grid-template-columns:repeat(3,minmax(0,1fr));gap:0 28px;}
+  .rec{display:flex;flex-direction:column;align-items:stretch;align-self:start;text-align:left;border-top:0;padding:0;} .rec img{flex:none;width:100%;height:auto;aspect-ratio:6/7;margin-bottom:12px;} .rec-tx{width:100%;}
+  .code b{font-size:46px;}
+  .rec-tag{display:block;} .rec-tag span{display:block;}
+  #list .sec-label{font-size:23px;}
+  .grid2{grid-template-columns:repeat(3,minmax(0,1fr));gap:34px 22px;}
+  .more{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,2fr);gap:0 28px;padding:24px 0;} .more .code{margin-top:0;}
+  .linkbox{max-width:420px;}
+  .foot-band{width:100%;margin:18px 0 0;}
+}
+section[hidden]{display:none;}
+.hero img{aspect-ratio:1040/760;} @media (min-width:900px){.hero img{aspect-ratio:1560/640;}}
+.foot-band{aspect-ratio:1040/470;} @media (min-width:900px){.foot-band{aspect-ratio:1920/360;}}
+.foot-band{background:var(--tb);}
+.hero img{color:var(--paper);font-size:13px;line-height:1.6;} .foot-band{color:var(--paper);font-size:15px;line-height:1.8;}
+@supports (width:1cqw){.hero{--u:1cqw;}}
+</style></head>
+<body>
+<!-- id="logo" src="data:image -->
+<header class="hero" id="hero">
+  <picture><source media="(min-width:900px)" type="image/webp" srcset="https://saijo-shirt.github.io/shirt/assets/kiji-hero-pc.b06fb3b6.webp"><source media="(min-width:900px)" srcset="https://saijo-shirt.github.io/shirt/assets/kiji-hero-pc.c61b5f0d.png"><source type="image/webp" srcset="https://saijo-shirt.github.io/shirt/assets/kiji-hero-sp.32a6921b.webp"><img src="https://saijo-shirt.github.io/shirt/assets/kiji-hero-sp.26f83c0a.png" alt="西条シャツ 新着生地のご案内。縞の生地見本" fetchpriority="high"></picture>
+  <h1>新着生地のご案内</h1>
+  <p class="season" id="season"></p>
+</header>
+<div class="wrap">
+  <section>
+    <p class="sec-label">店主のおすすめ</p>
+    <div class="sec-body"><div class="recs" id="recs"></div></div>
+  </section>
+  <section id="list-top">
+    <p class="sec-label">生地の一覧</p>
+    <div class="sec-body">
+      <div class="tabs" role="tablist" id="tabs"></div>
+      <p class="kakaku">価格は基本料金です。写真を押すと、拡大と生地の詳細が開きます。</p>
+      <main id="list"></main>
+    </div>
+  </section>
+  <footer>
+    <a class="linkbox" href="https://saijo-shirt.github.io/shirt/"><span class="v">納期・フェアのご案内</span></a>
+    <picture><source media="(min-width:900px)" type="image/webp" srcset="https://saijo-shirt.github.io/shirt/assets/kiji-band-pc.d5585c2a.webp"><source media="(min-width:900px)" srcset="https://saijo-shirt.github.io/shirt/assets/kiji-band-pc.2fc06a09.png"><source type="image/webp" srcset="https://saijo-shirt.github.io/shirt/assets/kiji-band-sp.01ae4628.webp"><img class="foot-band" src="https://saijo-shirt.github.io/shirt/assets/kiji-band-sp.a956a9ca.png" alt="気になる生地がございましたら、品番をお知らせください。 このトークから、どうぞ気軽にお声がけください。" loading="lazy" decoding="async"></picture>
+    <p class="foot-note">※ 画面の設定により、実物と色味が異なって見える場合がございます。</p>
+    <p class="legend">C＝綿　P＝ポリエステル　L＝リネン　Ra＝ラミー</p>
+  </footer>
+</div>
+<script>
+/* ===== ここから下だけを次回の入荷で差し替える ===== */
+
+const SEASON  = "2026 AUTUMN / WINTER";
+
+/* c=品番の数字 n=色名 y=糸番手 b=混率 w=組織 p=柄 pr=価格 d=説明 wash=洗い加工 */
+const TABS = [
+ {id:"teiban", label:"定番", groups:[
+   {name:"ブロード", items:[
+     {c:"00500",n:"ホワイト",y:"50/1x50/1",b:"C100%",w:"ブロード",p:"無地",pr:11000,d:"張りのある風合いと、さらりとした肌ざわりのカラーブロードです。"},
+     {c:"00501",n:"サックス",y:"50/1x50/1",b:"C100%",w:"ブロード",p:"無地",pr:11000,d:"張りのある風合いと、さらりとした肌ざわりのカラーブロードです。"},
+     {c:"00502",n:"ピンク",y:"50/1x50/1",b:"C100%",w:"ブロード",p:"無地",pr:13200,d:"張りのある風合いと、さらりとした肌ざわりのカラーブロードです。"},
+     {c:"00503",n:"イエロー",y:"50/1x50/1",b:"C100%",w:"ブロード",p:"無地",pr:13200,d:"張りのある風合いと、さらりとした肌ざわりのカラーブロードです。"},
+     {c:"00504",n:"ライトグレイ",y:"50/1x50/1",b:"C100%",w:"ブロード",p:"無地",pr:13200,d:"張りのある風合いと、さらりとした肌ざわりのカラーブロードです。"},
+     {c:"00505",n:"サンドベージュ",y:"50/1x50/1",b:"C100%",w:"ブロード",p:"無地",pr:13200,d:"張りのある風合いと、さらりとした肌ざわりのカラーブロードです。"},
+     {c:"00506",n:"ベージュ",y:"50/1x50/1",b:"C100%",w:"ブロード",p:"無地",pr:13200,d:"張りのある風合いと、さらりとした肌ざわりのカラーブロードです。"},
+     {c:"00507",n:"モカブラウン",y:"50/1x50/1",b:"C100%",w:"ブロード",p:"無地",pr:13200,d:"張りのある風合いと、さらりとした肌ざわりのカラーブロードです。"},
+     {c:"00508",n:"サックスブルー",y:"50/1x50/1",b:"C100%",w:"ブロード",p:"無地",pr:13200,d:"張りのある風合いと、さらりとした肌ざわりのカラーブロードです。"},
+     {c:"00509",n:"オレンジ",y:"50/1x50/1",b:"C100%",w:"ブロード",p:"無地",pr:13200,d:"張りのある風合いと、さらりとした肌ざわりのカラーブロードです。"},
+     {c:"00510",n:"レッド",y:"50/1x50/1",b:"C100%",w:"ブロード",p:"無地",pr:13200,d:"張りのある風合いと、さらりとした肌ざわりのカラーブロードです。"},
+     {c:"00511",n:"ワイン",y:"50/1x50/1",b:"C100%",w:"ブロード",p:"無地",pr:13200,d:"張りのある風合いと、さらりとした肌ざわりのカラーブロードです。"},
+     {c:"00512",n:"モスグリーン",y:"50/1x50/1",b:"C100%",w:"ブロード",p:"無地",pr:13200,d:"張りのある風合いと、さらりとした肌ざわりのカラーブロードです。"},
+     {c:"00513",n:"ブラウン",y:"50/1x50/1",b:"C100%",w:"ブロード",p:"無地",pr:13200,d:"張りのある風合いと、さらりとした肌ざわりのカラーブロードです。"},
+     {c:"00598",n:"ネイビー",y:"50/1x50/1",b:"C100%",w:"ブロード",p:"無地",pr:13200,d:"張りのある風合いと、さらりとした肌ざわりのカラーブロードです。"},
+     {c:"00599",n:"ブラック",y:"50/1x50/1",b:"C100%",w:"ブロード",p:"無地",pr:13200,d:"張りのある風合いと、さらりとした肌ざわりのカラーブロードです。"}
+   ]},
+   {name:"ストライプ", items:[
+     {c:"12962",n:"ティールブルー",y:"100/2x70/1",b:"C100%",p:"ロンドンストライプ",pr:19800,d:"等間隔の線がはっきりと出るロンドンストライプです。"},
+     {c:"12963",n:"グレイ×グリーン",y:"120/2x70/1",b:"C100%",p:"オルタネイトストライプ",pr:19800,d:"太さの違う線を交互に配したストライプです。"},
+     {c:"12964",n:"ブラウン×ブラック",y:"120/2x70/1",b:"C100%",p:"オルタネイトストライプ",pr:19800,d:"太さの違う線を交互に配したストライプです。"},
+     {c:"12965",n:"グレイ×ブラック",y:"70/1x70/1",b:"C100%",p:"オルタネイトストライプ",pr:19800,d:"太さの違う線を交互に配したストライプです。"},
+     {c:"12966",n:"グレイ",y:"100/2x70/1",b:"C100%",p:"地付きストライプ",pr:19800,d:"地の色に同系の線を重ねた、落ち着いた表情のストライプです。"},
+     {c:"12967",n:"ベージュ",y:"120/2x100/1",b:"C100%",p:"地付きストライプ",pr:19800,d:"地の色に同系の線を重ねた、落ち着いた表情のストライプです。"}
+   ]},
+   {name:"ツイル", items:[
+     {c:"12968",n:"ホワイト",y:"30/1x30/1",b:"C100%",w:"ツイル",p:"無地",pr:19800,d:"オーガニックコットンを使った、伸びのあるツイルです。"},
+     {c:"12969",n:"グレイ",y:"30/1x30/1",b:"C100%",w:"ツイル",p:"無地",pr:19800,d:"オーガニックコットンを使った、伸びのあるツイルです。"},
+     {c:"12970",n:"ブラウン",y:"30/1x30/1",b:"C100%",w:"ツイル",p:"無地",pr:19800,d:"オーガニックコットンを使った、伸びのあるツイルです。"},
+     {c:"12971",n:"ネイビー",y:"30/1x30/1",b:"C100%",w:"ツイル",p:"無地",pr:19800,d:"オーガニックコットンを使った、伸びのあるツイルです。"}
+   ]}
+ ]},
+
+ {id:"kinou", label:"機能素材", groups:[
+   {name:"吸放湿素材", items:[
+     {c:"17190",n:"ベージュ",y:"75Dx75D",b:"P100%",p:"無地",pr:20900,d:"糸に練り込んだ活性粒子が、汗を水蒸気のうちに逃がす素材です。衣服の中の湿度が上がりにくく、蒸れを抑えます。"},
+     {c:"17191",n:"ブルー",y:"75Dx75D",b:"P100%",p:"無地",pr:20900,d:"糸に練り込んだ活性粒子が、汗を水蒸気のうちに逃がす素材です。衣服の中の湿度が上がりにくく、蒸れを抑えます。"},
+     {c:"17192",n:"ブラウン",y:"75Dx75D",b:"P100%",p:"無地",pr:20900,d:"糸に練り込んだ活性粒子が、汗を水蒸気のうちに逃がす素材です。衣服の中の湿度が上がりにくく、蒸れを抑えます。"},
+     {c:"17193",n:"グレイ",y:"75Dx75D",b:"P100%",p:"無地",pr:20900,d:"糸に練り込んだ活性粒子が、汗を水蒸気のうちに逃がす素材です。衣服の中の湿度が上がりにくく、蒸れを抑えます。"},
+     {c:"17194",n:"ネイビー",y:"75Dx75D",b:"P100%",p:"無地",pr:20900,d:"糸に練り込んだ活性粒子が、汗を水蒸気のうちに逃がす素材です。衣服の中の湿度が上がりにくく、蒸れを抑えます。"}
+   ]},
+   {name:"ニット", items:[
+     {c:"18151",n:"ベージュ",y:"56T",b:"P100%",w:"ニット（特殊構造の編み）",p:"無地",pr:19800,d:"特殊な編みで吸水速乾と通気性を備え、パナマ織のような表情に仕上げた素材です。"},
+     {c:"18152",n:"ブルー",y:"56T",b:"P100%",w:"ニット（特殊構造の編み）",p:"無地",pr:19800,d:"特殊な編みで吸水速乾と通気性を備え、パナマ織のような表情に仕上げた素材です。"},
+     {c:"18153",n:"ネイビー",y:"56T",b:"P100%",w:"ニット（特殊構造の編み）",p:"無地",pr:19800,d:"特殊な編みで吸水速乾と通気性を備え、パナマ織のような表情に仕上げた素材です。"},
+     {c:"18154",n:"ホワイト",y:"56/1x60/1",b:"C100%",w:"ニット（天竺）",p:"無地",pr:20900,d:"アルビニ社のガス強撚糸を使った天竺です。シャリ感と控えめな光沢があります。"},
+     {c:"18155",n:"ブラウン",y:"56/1x60/1",b:"C100%",w:"ニット（天竺）",p:"無地",pr:20900,d:"アルビニ社のガス強撚糸を使った天竺です。シャリ感と控えめな光沢があります。"},
+     {c:"18156",n:"ネイビー",y:"56/1x60/1",b:"C100%",w:"ニット（天竺）",p:"無地",pr:20900,d:"アルビニ社のガス強撚糸を使った天竺です。シャリ感と控えめな光沢があります。"}
+   ]}
+ ]},
+
+ {id:"denim", label:"デニム・ダンガリー", groups:[
+   {name:"", items:[
+     {c:"19231",n:"ホワイト",y:"40/1x40/1",b:"C100%",w:"起毛",p:"無地",pr:15400,d:"米国産の綿を100%使い、起毛加工でしっとりと反発のある風合いに仕上げました。"},
+     {c:"19232",n:"ブルー",y:"40/1x40/1",b:"C100%",w:"起毛",p:"無地",pr:15400,d:"米国産の綿を100%使い、起毛加工でしっとりと反発のある風合いに仕上げました。"},
+     {c:"19233",n:"ネイビー",y:"40/1x40/1",b:"C100%",w:"起毛",p:"無地",pr:15400,d:"米国産の綿を100%使い、起毛加工でしっとりと反発のある風合いに仕上げました。"},
+     {c:"19234",n:"ブラック",y:"40/1x40/1",b:"C100%",w:"ダンガリー（硫化染め）",p:"無地",pr:18700,d:"硫化染めのダンガリー。黒く染めた糸と白い糸が織り込まれる。"},
+     {c:"22131",y:"18/1+30/1x20/1",b:"C100%",w:"デニム",p:"無地",pr:23100,d:"経糸に太さの違うムラ糸を使ったデニムです。",wash:true},
+     {c:"22132",y:"18/1+30/1x20/1",b:"C100%",w:"デニム",p:"無地",pr:23100,d:"経糸に太さの違うムラ糸を使ったデニムです。",wash:true}
+   ]}
+ ]},
+
+ {id:"kokusan", label:"国産プレミアム", groups:[
+   {name:"Silver Line", items:[
+     {c:"84770",n:"ホワイト",y:"100/2Gx100/2G",b:"C100%",w:"マイクロツイル",p:"無地",pr:20900,d:"細番手の双糸で織り上げた、きめの細かいマイクロツイルです。"},
+     {c:"84771",n:"サックス",y:"100/2Gx100/2G",b:"C100%",w:"マイクロツイル",p:"無地",pr:20900,d:"細番手の双糸で織り上げた、きめの細かいマイクロツイルです。"},
+     {c:"84772",n:"ピンク",y:"100/2Gx100/2G",b:"C100%",w:"マイクロツイル",p:"無地",pr:20900,d:"細番手の双糸で織り上げた、きめの細かいマイクロツイルです。"},
+     {c:"84773",n:"グレイ",y:"100/2Gx100/2G",b:"C100%",w:"マイクロツイル",p:"無地",pr:20900,d:"細番手の双糸で織り上げた、きめの細かいマイクロツイルです。"},
+     {c:"84774",n:"ベージュ",y:"100/2Gx100/2G",b:"C100%",w:"マイクロツイル",p:"無地",pr:20900,d:"細番手の双糸で織り上げた、きめの細かいマイクロツイルです。"},
+     {c:"84775",n:"ホワイト",y:"100/2Gx100/2G",b:"C100%",w:"ヘリンボーン",p:"無地",pr:20900,d:"細番手の双糸で織り上げた、杉綾のヘリンボーンです。"},
+     {c:"84776",n:"サックス",y:"100/2Gx100/2G",b:"C100%",w:"ヘリンボーン",p:"無地",pr:20900,d:"細番手の双糸で織り上げた、杉綾のヘリンボーンです。"},
+     {c:"84777",n:"ピンク",y:"100/2Gx100/2G",b:"C100%",w:"ヘリンボーン",p:"無地",pr:20900,d:"細番手の双糸で織り上げた、杉綾のヘリンボーンです。"},
+     {c:"84778",n:"グレイ",y:"100/2Gx100/2G",b:"C100%",w:"ヘリンボーン",p:"無地",pr:20900,d:"細番手の双糸で織り上げた、杉綾のヘリンボーンです。"},
+     {c:"84779",n:"ベージュ",y:"100/2Gx100/2G",b:"C100%",w:"ヘリンボーン",p:"無地",pr:20900,d:"細番手の双糸で織り上げた、杉綾のヘリンボーンです。"}
+   ]},
+   {name:"Albini", items:[
+     {c:"12972",n:"ネイビー",y:"100/2x60/1",b:"C100%",p:"ストライプ",pr:22000,d:"アルビニ社の綿糸「コーコラン」を使い、日本で高密度に織り上げた生地です。"},
+     {c:"12973",n:"グレイ",y:"100/2x60/1",b:"C100%",p:"地付きストライプ",pr:22000,d:"アルビニ社の綿糸「コーコラン」を使い、日本で高密度に織り上げた生地です。"},
+     {c:"12974",n:"ネイビー",y:"100/2x60/1",b:"C100%",p:"無地",pr:22000,d:"アルビニ社の綿糸「コーコラン」を使い、日本で高密度に織り上げた生地です。"},
+     {c:"82787",n:"サックス",y:"100/2x60/1x60/1",b:"C60% L40%",p:"無地",pr:22000,d:"アルビニ社の綿糸「コーコラン」に麻を合わせ、日本で高密度に織り上げた生地です。清涼感があります。"},
+     {c:"82788",n:"ブラウン",y:"100/2x60/1x60/1",b:"C60% L40%",p:"無地",pr:22000,d:"アルビニ社の綿糸「コーコラン」に麻を合わせ、日本で高密度に織り上げた生地です。清涼感があります。"},
+     {c:"82789",n:"ブラック",y:"100/2x60/1x60/1",b:"C60% L40%",p:"無地",pr:22000,d:"アルビニ社の綿糸「コーコラン」に麻を合わせ、日本で高密度に織り上げた生地です。清涼感があります。"}
+   ]}
+ ]},
+
+ {id:"import", label:"インポート", groups:[
+   {name:"Canclini", items:[
+     {c:"75155",n:"サックス",y:"90/2x90/2",b:"C100%",w:"ツイル",p:"ストライプ",pr:28600,d:"ツイル地に線を配したストライプです。"},
+     {c:"75156",n:"サックス",y:"90/2x90/2",b:"C100%",w:"ドビー",p:"チェック",pr:28600,d:"ドビー織のチェックです。"},
+     {c:"76439",n:"ホワイト",y:"90/2x90/2",b:"C100%",w:"グログラン",p:"無地",pr:19800,d:"横畝の出るグログランです。"},
+     {c:"76440",n:"ホワイト",y:"90/2x90/2",b:"C100%",w:"オックス",p:"無地",pr:19800,d:"ふっくらとした肉感のあるオックスです。"},
+     {c:"76441",n:"ホワイト",y:"120/2x60/1+1/48",b:"C74% Ra26%",p:"無地",pr:19800,d:"ドライな肌ざわりのコットンラミーです。"},
+     {c:"76442",n:"ネイビー",y:"50/1x50/1",b:"C100%",w:"ドビー",p:"無地",pr:19800,d:"ドビー織の無地です。"},
+     {c:"76443",n:"サックス",y:"60/1x60/1",b:"C100%",p:"グラデーションストライプ",pr:19800,d:"線の濃淡が移り変わるストライプです。"},
+     {c:"76444",n:"サックス",y:"80/1x140/1",b:"C100%",pr:19800,d:"光沢と滑らかな肌ざわりを備えた生地です。"},
+     {c:"76445",n:"サックス",y:"80/1x140/1",b:"C100%",p:"オルタネイトストライプ",pr:19800,d:"太さの違う線を交互に配したストライプです。"},
+     {c:"76446",y:"90/2x60/1",b:"C100%",pr:19800,d:"しなやかで、光沢があります。"},
+     {c:"76447",n:"サックス",y:"80/1x80/1",b:"C100%",p:"装飾的なストライプ",pr:19800,d:"きめが細かく密度の高い生地に、装飾的なストライプを配しています。"},
+     {c:"76448",n:"グレイ",y:"80/1x80/1",b:"C100%",p:"ストライプ",pr:19800,d:"細番手で織り上げたストライプです。"},
+     {c:"76449",n:"ブラウン",y:"90/2x60/1",b:"C100%",p:"ストライプ（縁にパープル）",pr:19800,d:"線の縁に紫を効かせたストライプです。"},
+     {c:"76450",n:"ブラウン",y:"120/2x120/2",b:"C100%",p:"地付きストライプ",pr:19800,d:"120/2の双糸で織り上げた地付きストライプです。"},
+     {c:"76451",n:"ブラウン",y:"90/2x60/1",b:"C100%",p:"マイクロチェック",pr:19800,d:"細かなマイクロチェックです。"}
+   ]},
+   {name:"Thomas Mason", items:[
+     {c:"80016",n:"ネイビー",y:"100/2x70/1",b:"C100%",w:"ポプリン",p:"ストライプ",pr:28600,d:"Regentシリーズ。鮮やかなストライプと上質な生地が持ち味のポプリンです。"},
+     {c:"80017",n:"カーキ",y:"100/2x70/1",b:"C100%",w:"ポプリン",p:"ストライプ",pr:28600,d:"Regentシリーズ。鮮やかなストライプと上質な生地が持ち味のポプリンです。"},
+     {c:"80018",n:"ブルー",y:"100/2x70/1",b:"C100%",w:"ポプリン",p:"ストライプ",pr:28600,d:"Regentシリーズ。鮮やかなストライプと上質な生地が持ち味のポプリンです。"},
+     {c:"80019",n:"グリーン",y:"100/2x70/1",b:"C100%",w:"ポプリン",p:"ストライプ",pr:28600,d:"Regentシリーズ。鮮やかなストライプと上質な生地が持ち味のポプリンです。"},
+     {c:"80020",n:"グレイ",y:"120/2x70/1",b:"C100%",p:"単色ストライプ",pr:28600,d:"Downingシリーズ。光沢と柔らかな手ざわりを備えた、単色のストライプです。"},
+     {c:"80021",n:"ボルドー",y:"120/2x70/1",b:"C100%",p:"単色ストライプ",pr:28600,d:"Downingシリーズ。光沢と柔らかな手ざわりを備えた、単色のストライプです。"}
+   ]},
+   {name:"Import", items:[
+     {c:"87061",mk:"SIDOGRAS",n:"ブラウン",y:"21/1x21/1",b:"C100%",p:"地付きストライプ",pr:23100,d:"スペイン製のオーガニックコットンを使った地付きストライプです。"},
+     {c:"87062",mk:"SIDOGRAS",n:"インディゴ",y:"21/1x21/1",b:"C100%",p:"地付きストライプ",pr:23100,d:"スペイン製のオーガニックコットンを使った地付きストライプです。"},
+     {c:"87063",mk:"SIDOGRAS",n:"サックス",y:"40/1x10/1",b:"C100%",w:"オックス",p:"ストライプ",pr:23100,d:"スペイン製のオーガニックコットンを使ったオックスのストライプです。"},
+     {c:"87064",mk:"SIDOGRAS",n:"ラズベリー",y:"40/1x10/1",b:"C100%",w:"オックス",p:"ストライプ",pr:23100,d:"スペイン製のオーガニックコットンを使ったオックスのストライプです。"},
+     {c:"87065",mk:"SIDOGRAS",n:"グリーン",y:"40/1x10/1",b:"C100%",w:"オックス",p:"ストライプ",pr:23100,d:"スペイン製のオーガニックコットンを使ったオックスのストライプです。"},
+     {c:"87066",mk:"SIDOGRAS",n:"ブラウン",y:"40/1x10/1",b:"C100%",p:"地付きストライプ",pr:23100,d:"スペイン製のオーガニックコットンを使った地付きストライプです。"}
+   ]}
+ ]}
+];
+
+
+const LEADS = {
+ "teiban/ブロード":"毎日のシャツの土台になる無地です。洗って乾かしても表情が変わりにくく、扱いに気を使いません。",
+ "teiban/ストライプ":"線の太さと間隔で印象が変わります。無地に一着足したいときの選択肢です。",
+ "teiban/ツイル":"斜めの畝が出る織りです。適度な厚みがあり、体の線を拾いすぎません。",
+ "kinou/吸放湿素材":"湿度を逃がす糸を使った素材です。動きの多い日や、上着を脱ぎ着する場面に向きます。",
+ "kinou/ニット":"編み地のシャツです。伸びがあり、肩や腕まわりが窮屈になりにくい作りです。",
+ "denim/":"厚みと表情のある綿です。休日から、少し崩した装いまで。",
+ "kokusan/Silver Line":"国内で紡いだ双糸を、細かく織り上げた無地です。光の当たり方で表情が出ます。",
+ "kokusan/Albini":"イタリアの綿を日本で織り上げた生地です。密度が高く、なめらかに仕上がります。",
+ "import/Canclini":"イタリア製の生地です。柄の描き方に幅があり、選ぶ楽しさがあります。",
+ "import/Thomas Mason":"イギリスに始まる生地です。ストライプの発色と光沢が持ち味です。",
+ "import/Import":"産地もメーカーも異なる輸入生地を集めた区分です。入荷のたびに顔ぶれが変わります。"
+};
+
+/* 店主のおすすめ（品番の数字を3つ。上の TABS にある品番から選ぶ） */
+const RECS = ["75155","84770","17190"];
+
+/* ===== ここから下は書き換えない ===== */
+
+const VIEWS = [["tatami","お仕立て上がり"],["hiraoki","平置き"],["kakudai","拡大"],["kiji","生地"]];
+const yen = v => v.toLocaleString("ja-JP");
+const src = (c,v) => "img/ms-" + c + "_" + v + ".jpg";
+function guard(im){
+  im.addEventListener("error", ()=>{
+    const d = el("div","imgna", im.closest(".thumb") ? "" : "画像を準備中です");
+    if(im.parentNode) im.parentNode.replaceChild(d, im);
+  });
+  return im;
+}
+const ZOOM = '<svg width="13" height="13" viewBox="0 0 256 256" fill="#0065AE" aria-hidden="true"><path d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Zm112,0a8,8,0,0,1-8,8H120v24a8,8,0,0,1-16,0V120H80a8,8,0,0,1,0-16h24V80a8,8,0,0,1,16,0v24h24A8,8,0,0,1,152,112Z"/></svg>';
+const el = (t,c,x) => { const e=document.createElement(t); if(c) e.className=c; if(x!==undefined) e.textContent=x; return e; };
+
+document.getElementById("season").innerHTML = SEASON.replace(/^(\d+)\s*(.*)$/, (m,y,r)=>'<b>'+y+'</b><span class="sw">'+r.split(" / ").map((t,i,a)=>'<span>'+t+(i<a.length-1?' /':'')+'</span>').join(" ")+'</span>');
+
+const tabsEl = document.getElementById("tabs");
+const listEl = document.getElementById("list");
+const count = tab => tab.groups.reduce((s,g)=>s+g.items.length,0);
+
+TABS.forEach((tab,i)=>{
+  const b = el("button","tab");
+  b.type="button"; b.setAttribute("role","tab");
+  b.setAttribute("aria-selected", i===0 ? "true":"false");
+  b.appendChild(document.createTextNode(tab.label));
+  b.appendChild(el("span","n", count(tab) + "点"));
+  b.addEventListener("click", ()=>select(i, true));
+  tabsEl.appendChild(b);
+});
+
+function select(i, keepScroll){
+  [...tabsEl.children].forEach((b,j)=>b.setAttribute("aria-selected", i===j ? "true":"false"));
+  render(TABS[i], keepScroll);
+  try{ history.replaceState(null,"","#"+TABS[i].id); }catch(e){}
+}
+
+function render(tab, keepScroll){
+  listEl.textContent = "";
+
+  if(tab.groups.length > 1){
+    const toc = el("div","toc");
+    tab.groups.forEach((g,gi)=>{
+      const b = el("button"); b.type="button";
+      b.appendChild(el("span","tn", String(gi+1).padStart(2,"0")));
+      b.appendChild(el("span",null,(g.name || tab.label)));
+      b.appendChild(el("span","tc", g.items.length + "点"));
+      b.addEventListener("click", ()=>{
+        const t = document.getElementById("g" + gi);
+        if(t) t.scrollIntoView({block:"start"});
+      });
+      toc.appendChild(b);
+    });
+    listEl.appendChild(toc);
+  }
+
+  tab.groups.forEach((g,gi)=>{
+    const lab = el("div","sec-label");
+    lab.id = "g" + gi;
+    lab.appendChild(el("span","sec-num", String(gi+1).padStart(2,"0")));
+    lab.appendChild(el("span",null, g.name || tab.label));
+    listEl.appendChild(lab);
+
+    const lead = LEADS[tab.id + "/" + g.name];
+    if(lead) listEl.appendChild(el("p","lead", lead));
+
+    const grid = el("div","grid2");
+    let i = 0;
+    while(i < g.items.length){
+      let j = i;
+      while(j+1 < g.items.length && g.items[j+1].d === g.items[i].d) j++;
+      const run = g.items.slice(i, j+1);
+      if(run.length >= 2){
+        const p = el("p","note runnote", run[0].d);
+        p.style.gridColumn = "1 / -1";
+        grid.appendChild(p);
+      }
+      run.forEach(it=>grid.appendChild(compact(it, true)));
+      i = j+1;
+    }
+    listEl.appendChild(grid);
+  });
+  if(!keepScroll) window.scrollTo({top:0});
+}
+
+function thumbs(it, stage){
+  const cap = el("p","thumb-cap", VIEWS[0][1]);
+  const row = el("div","thumbs");
+  VIEWS.forEach(([v,label],i)=>{
+    const b = el("button","thumb");
+    b.type="button";
+    b.setAttribute("aria-pressed", i===0 ? "true":"false");
+    b.setAttribute("aria-label", label);
+    const im = document.createElement("img");
+    im.alt=""; im.loading="lazy"; guard(im); im.src = src(it.c,v);
+    b.appendChild(im);
+    b.addEventListener("click", e=>{
+      e.stopPropagation();
+      stage.src = src(it.c,v);
+      cap.textContent = label;
+      [...row.children].forEach((x,k)=>x.setAttribute("aria-pressed", i===k ? "true":"false"));
+    });
+    row.appendChild(b);
+  });
+  return {row, cap};
+}
+
+function specLine(it){
+  return [it.b, it.w, it.p, it.y].filter(Boolean).join("／");
+}
+
+function priceEl(it){
+  const box = document.createDocumentFragment();
+  box.appendChild(el("p","base","基本料金"));
+  const pr = el("p","price", yen(it.pr));
+  pr.appendChild(el("span","unit", "円（税込）〜"));
+  box.appendChild(pr);
+  return box;
+}
+
+
+function place(card, panel){
+  const top = card.offsetTop; let last = card;
+  [...card.parentNode.children].forEach(x=>{ if(x.classList.contains("card2") && Math.abs(x.offsetTop - top) < 4) last = x; });
+  last.after(panel);
+}
+
+let lastW = innerWidth, rz = 0;
+addEventListener("resize", ()=>{
+  if(innerWidth === lastW) return;
+  lastW = innerWidth; clearTimeout(rz);
+  rz = setTimeout(()=>{
+    const ops = [...document.querySelectorAll(".card2.open")];
+    ops.forEach(c=>c._more.remove());
+    const seen = new Set();
+    ops.map(c=>[c, c.parentNode.id + "/" + c.offsetTop, c.parentNode]).forEach(([c,k,g])=>{ const key = [...document.querySelectorAll(".grid2")].indexOf(g) + "/" + k; if(seen.has(key)){ c._set(false); return; } seen.add(key); });
+    ops.filter(c=>c.classList.contains("open")).forEach(c=>place(c, c._more));
+  }, 120);
+});
+
+function compact(it, withDesc){
+  const box = el("button","card2");
+  box.type = "button";
+  box.setAttribute("aria-expanded","false");
+
+  const wrap = el("div","phwrap");
+  const ph = document.createElement("img");
+  ph.className = "ph";
+  ph.alt = "ms-" + it.c + (it.n ? " " + it.n : "");
+  ph.loading = "lazy";
+  guard(ph);
+  ph.src = src(it.c,"tatami");
+  wrap.appendChild(ph);
+  const z = el("span","zoom");
+  z.innerHTML = ZOOM;
+  wrap.appendChild(z);
+  box.appendChild(wrap);
+
+  box.appendChild(el("p","color2", it.n || " "));
+  const cd = el("p","code"); cd.innerHTML = 'ms-<b>' + it.c + '</b>'; box.appendChild(cd);
+  box.appendChild(priceEl(it));
+  if(it.wash) box.appendChild(el("span","flag","洗い加工が入る生地"));
+
+
+  const more = el("div","more");
+  more.hidden = true;
+  more.id = "m" + it.c;
+  const left = el("div","more-ph");
+  const stage = document.createElement("img");
+  stage.className = "stage"; stage.alt = ph.alt; stage.loading = "lazy"; guard(stage); stage.src = src(it.c,"tatami");
+  left.appendChild(stage);
+  const t = thumbs(it, stage);
+  left.appendChild(t.row);
+  left.appendChild(t.cap);
+  more.appendChild(left);
+  const right = el("div","more-tx");
+  const mc = el("p","code"); mc.innerHTML = 'ms-<b>' + it.c + '</b>'; if(it.n) mc.appendChild(el("span","cn", it.n)); right.appendChild(mc);
+  if(withDesc) right.appendChild(el("p","note", it.d));
+  if(it.mk) right.appendChild(el("p","maker","生地メーカー　" + it.mk));
+  right.appendChild(el("p","spec", specLine(it)));
+  const cl = el("button","more-close","閉じる"); cl.type = "button"; right.appendChild(cl);
+  more.appendChild(right);
+  box._more = more;
+  box.setAttribute("aria-controls", more.id);
+
+  const setOpen = open=>{
+    box.classList.toggle("open", open);
+    box.setAttribute("aria-expanded", open ? "true":"false");
+    if(open){
+
+      [...box.parentNode.children].forEach(x=>{ if(x !== box && x.classList.contains("card2") && x.classList.contains("open") && Math.abs(x.offsetTop - box.offsetTop) < 4) x._set(false); });
+      place(box, more);
+      more.hidden = false;
+      if(more.getBoundingClientRect().top > innerHeight * 0.55)
+        box.scrollIntoView({block:"start", behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth"});
+    }else{
+      more.hidden = true;
+      more.remove();
+      if(stage.isConnected) stage.src = src(it.c,"tatami");
+      t.cap.textContent = VIEWS[0][1];
+      [...t.row.children].forEach((x,k)=>x.setAttribute("aria-pressed", k===0 ? "true":"false"));
+    }
+  };
+  box._set = setOpen;
+  box.addEventListener("click", ()=>setOpen(!box.classList.contains("open")));
+  cl.addEventListener("click", ()=>{ setOpen(false); box.focus({preventScroll:true}); });
+  return box;
+}
+
+
+const recEl = document.getElementById("recs");
+RECS.forEach(c=>{
+  let hit=null;
+  TABS.forEach((tab,ti)=>tab.groups.forEach(g=>g.items.forEach(it=>{ if(it.c===c) hit={it,tab,ti,g}; })));
+  if(!hit) return;
+  const a = el("button","rec"); a.type="button";
+  const im = document.createElement("img"); im.alt = "ms-" + c + " " + hit.it.n; guard(im); im.src = src(c,"kakudai"); a.appendChild(im);
+  const tx = el("div","rec-tx");
+  const tg = el("p","rec-tag"); tg.appendChild(el("span","", hit.tab.label)); tg.appendChild(el("span","", hit.g.name || " ")); tx.appendChild(tg);
+  const cd = el("p","code"); cd.innerHTML = 'ms-<b>' + c + '</b>'; tx.appendChild(cd);
+  tx.appendChild(el("p","color2", hit.it.n));
+  const pr = el("p","price", yen(hit.it.pr)); pr.appendChild(el("span","unit","円（税込）〜")); tx.appendChild(pr);
+  a.appendChild(tx);
+  a.addEventListener("click", ()=>{ select(hit.ti, true); document.getElementById("list-top").scrollIntoView({block:"start"}); });
+  recEl.appendChild(a);
+});
+if(!recEl.children.length) recEl.closest("section").hidden = true;
+const hash = (location.hash || "").replace("#","");
+const start = Math.max(0, TABS.findIndex(t=>t.id===hash));
+select(start, true);
+const nav = (performance.getEntriesByType && performance.getEntriesByType("navigation")[0]) || {};
+if(hash && TABS.some(t=>t.id===hash) && nav.type !== "reload" && nav.type !== "back_forward"){
+  const top = document.getElementById("list-top");
+  const go = ()=>top.scrollIntoView({block:"start"});
+  go();
+  let moved = false;
+  addEventListener("wheel", ()=>{ moved = true; }, {once:true, passive:true});
+  addEventListener("touchstart", ()=>{ moved = true; }, {once:true, passive:true});
+  addEventListener("load", ()=>{ if(!moved) go(); });
+}
+</script>
+</body></html>

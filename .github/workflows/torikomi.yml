@@ -1,0 +1,32 @@
+name: torikomi
+on:
+  push:
+    branches: [fabric]
+    paths: ['torikomi.txt']
+permissions:
+  contents: write
+jobs:
+  torikomi:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: fetch
+        run: |
+          set -u
+          BASE=https://fabric.saijo-shirt.workers.dev
+          fail=0
+          while IFS= read -r p; do
+            p="${p%$'\r'}"
+            [ -z "$p" ] && continue
+            mkdir -p "public/$(dirname "$p")"
+            if ! curl -fsS --retry 3 -o "public/$p" "$BASE/$p"; then echo "NG $p"; fail=1; fi
+          done < torikomi.txt
+          ( cd public && find . -type f -printf '%s %p\n' | sort -k2 > ../torikomi_kekka.txt )
+          exit $fail
+      - name: commit
+        run: |
+          git config user.name saijo-shirt
+          git config user.email saijo.shirt@gmail.com
+          git add -A
+          git diff --cached --quiet || git commit -q -m "生地紹介ページ 取り込み"
+          git push

@@ -3,10 +3,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>納期のご案内｜西条シャツ</title>
 
-<link rel="preload" as="font" type="font/woff2" href="assets/nouki-sm600.ea104d95.woff2" crossorigin><link rel="preload" as="font" type="font/woff2" href="assets/nouki-sm700.3028b4dd.woff2" crossorigin><link rel="preload" as="font" type="font/woff2" href="assets/nouki-bm600.b5afb7b4.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="assets/nouki-sm600.4fce2b6c.woff2" crossorigin><link rel="preload" as="font" type="font/woff2" href="assets/nouki-sm700.c0db578a.woff2" crossorigin><link rel="preload" as="font" type="font/woff2" href="assets/nouki-bm600.b5afb7b4.woff2" crossorigin>
 <style>
-@font-face{font-family:"Shippori Mincho";font-style:normal;font-weight:600;font-display:swap;src:url("assets/nouki-sm600.ea104d95.woff2") format("woff2");}
-@font-face{font-family:"Shippori Mincho";font-style:normal;font-weight:700;font-display:swap;src:url("assets/nouki-sm700.3028b4dd.woff2") format("woff2");}
+@font-face{font-family:"Shippori Mincho";font-style:normal;font-weight:600;font-display:swap;src:url("assets/nouki-sm600.4fce2b6c.woff2") format("woff2");}
+@font-face{font-family:"Shippori Mincho";font-style:normal;font-weight:700;font-display:swap;src:url("assets/nouki-sm700.c0db578a.woff2") format("woff2");}
 @font-face{font-family:"Bodoni Moda";font-style:normal;font-weight:600;font-display:swap;src:url("assets/nouki-bm600.b5afb7b4.woff2") format("woff2");}
 :root{--paper:#ece6d8;--ink:#2e3a45;--ai:#566878;--tb:#7c6044;--tbd:#5f4630;--mut:#7d7a70;
   --bg:var(--paper);--fg:var(--ink);--rule:var(--tb);--label:var(--tbd);
@@ -180,7 +180,7 @@ footer{margin-top:44px;}
    ================================================================ */
 
 /* 更新日（画面下部に表示） */
-const UPDATED = "2026-10-07";
+const UPDATED = "2026-10-17";
 
 /* 一粒万倍日（当月と前月の2ヶ月ぶんを入れておく）
    端末の日付に合う月が自動で表示される。
@@ -194,26 +194,23 @@ const MONTHS = [
 ];
 
 /* フェア（ないときは空配列 [] のまま）
-   to を過ぎると自動で消える */
+   to を過ぎると自動で消える
+   overlap … 割引のフェアは true（一粒万倍日の欄に「割引額の大きいほう」の行を出す） */
 const FAIRS = [
   {
-    name:"実りのご優待",
-    period:"2026年9月18日(金) 〜 10月12日(月)　Bespoke（対面でのオーダー）承り分",
-    to:"2026-10-12",
+    name:"冬支度のご優待",
+    period:"2026年11月6日(金) 〜 11月24日(火)　Bespoke（対面でのオーダー）承り分",
+    to:"2026-11-24",
+    overlap:false,
     items:[
-      { tag:"形態安定素材",
-        body:"綿100%の形態安定素材でお仕立ていただくと",
-        off:"2,200円",
-        unit:"（税込）OFF ／ 1着につき" },
-      { tag:"上質生地",
-        body:"Thomas Mason・Canclini・Liberty・Import などの生地でお仕立ていただくと",
-        off:"3,300円",
-        unit:"（税込）OFF ／ 1着につき" }
+      { tag:"有料オプション",
+        body:"襟やカフス、ボタンなどをお選びいただくと",
+        off:"3つ",
+        unit:"まで無料 ／ 1着につき" }
     ],
     notes:[
-      "※ 一部、対象外の生地がございます",
-      "※ 各割引の併用不可",
-      "※ 一粒万倍日の10%OFFと重なる場合は、割引額の大きいほうを適用いたします"
+      "一粒万倍日の10%OFFとも、あわせてご利用いただけます。",
+      "※ 一部、対象外のオプションがございます"
     ]
   }
 ];
@@ -329,7 +326,7 @@ document.getElementById("month-label").innerHTML =
 (function renderFairs(){
   const box = document.getElementById("fair-list");
   const live = FAIRS.filter(f => !f.to || f.to >= TODAY);
-  document.getElementById("fair-overlap").hidden = live.length === 0;
+  document.getElementById("fair-overlap").hidden = !live.some(f => f.overlap);
   if(!live.length){
     box.innerHTML = '<p class="fair-none">現在、開催中のフェアはございません。</p>';
     return;

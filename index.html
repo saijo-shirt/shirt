@@ -44,7 +44,7 @@ section{margin-top:44px;padding-top:26px;border-top:1px solid var(--rule);}
 .fair-period{font-size:15px;font-variant-numeric:tabular-nums;margin-bottom:18px;}
 .fair-item{border-top:1px solid rgba(124,96,68,.45);padding:16px 0 18px;}
 .fair-tag{font-size:15px;color:var(--label);letter-spacing:.1em;line-height:1.4;margin-bottom:6px;}
-.fair-body{line-height:1.85;margin-bottom:8px;}
+.fair-body{line-height:1.85;margin-bottom:8px;word-break:keep-all;overflow-wrap:anywhere;}
 .fair-off{display:flex;align-items:baseline;flex-wrap:nowrap;white-space:nowrap;font-size:15px;line-height:1;}
 .fair-off b{font-size:42px;margin-right:3px;}
 .fair-off .unit{font-size:inherit;}
@@ -87,11 +87,11 @@ body.ai .row + .row{background:var(--tb);color:var(--paper);}
 .offer{font-weight:500;line-height:1.6;margin-bottom:4px;}
 
 footer{margin-top:44px;}
-.foot-band{display:block;width:calc(100% + 48px);margin:0 -24px;height:auto;}
+.foot-band{display:block;width:100%;margin:0;height:auto;}
 .foot-msg{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);}
 .updated{font-size:13px;color:var(--mut);margin-top:14px;text-align:right;font-variant-numeric:tabular-nums;}
 @media (max-width:389px){.days{grid-auto-flow:row;grid-template-columns:repeat(3,1fr);row-gap:14px;}}
-@media (max-width:379px){.wrap{padding-left:20px;padding-right:20px;} .foot-band{width:calc(100% + 40px);margin:0 -20px;} .row-date b{font-size:52px;} .fair-off b{font-size:36px;} .day-num{font-size:36px;}}
+@media (max-width:379px){.wrap{padding-left:20px;padding-right:20px;} .row-date b{font-size:52px;} .fair-off b{font-size:36px;} .day-num{font-size:36px;}}
 @media (max-width:339px){.fair-off b{font-size:32px;}}
 @media (min-width:980px){
   body{font-size:18px;}
@@ -180,7 +180,7 @@ footer{margin-top:44px;}
    ================================================================ */
 
 /* 更新日（画面下部に表示） */
-const UPDATED = "2026-10-17";
+const UPDATED = "2026-10-18";
 
 /* 一粒万倍日（当月と前月の2ヶ月ぶんを入れておく）
    端末の日付に合う月が自動で表示される。
@@ -198,13 +198,13 @@ const MONTHS = [
    overlap … 割引のフェアは true（一粒万倍日の欄に「割引額の大きいほう」の行を出す） */
 const FAIRS = [
   {
-    name:"冬支度のご優待",
+    name:"冬支度のオプションフェア",
     period:"2026年11月6日(金) 〜 11月24日(火)　Bespoke（対面でのオーダー）承り分",
     to:"2026-11-24",
     overlap:false,
     items:[
       { tag:"有料オプション",
-        body:"襟やカフス、ボタンなどをお選びいただくと",
+        body:"クレリックや白蝶貝のボタン、お名前の刺繍など",
         off:"3つ",
         unit:"まで無料 ／ 1着につき" }
     ],
